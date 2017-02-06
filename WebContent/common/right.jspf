@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<style>
+#layout_right_content {
+	box-shadow: 0 0 10px #BDBDBD;
+	background: #f7f5fa;
+	border-radius: 5px;
+}
+#setting{
+	float: right;
+	margin-bottom: 50px;
+	padding-right: 10px;
+	display: inline;
+}
+.w24{
+	width:16px;
+	
+}
+.w24:hover{
+	background: white;
+}
+</style>
+<script>
+	$(function(){
+	$("#menuFrame").show();
+	window.frames[0].document.body.ondblclick = function(){
+		$(".layout_left_menu").toggle();
+		if(flag == 1) {
+			$("#flow-right").css("margin-left",20+"px");
+			$("#layout_right_content").css("margin-left",30+"px");
+			flag = 0 ;		
+		} else if(flag == 0){
+			$("#flow-right").css("margin-left",width+20+"px");
+			$("#layout_right_content").css("margin-left",width+30+"px");
+			flag = 1 ;
+		}
+	}
+	
+	$("#min").click(function(){
+		$(".layout_left_menu").show();
+		$("#flow-right").css("margin-left",width+20+"px");
+		$("#layout_right_content").css("margin-left",width+30+"px");
+		flag = 1 ;
+	});
+	$("#max").click(function(){
+		$(".layout_left_menu").hide();
+		$("#flow-right").css("margin-left",20+"px");
+		$("#layout_right_content").css("margin-left",30+"px");
+		flag = 0 ;	
+	});
+	$("#close").click(function(){
+		$("#menuFrame").prop("src","");
+		$("#menuFrame").reload();
+	});
+	});
+</script>
+<div id="layout_right_content" class="layout_right_content">
+	<span>温馨提示：双击可隐藏左侧导航栏！</span>
+	<div id = "setting">
+            <a id="min"><img alt="最小化" src="${info}/images/min1.png" class="w24"></a>
+            <a id="max"><img alt="最大化" src="${info}/images/max1.png" class="w24"></a>
+            <a id="close"><img alt="关闭" src="${info}/images/close1.png" class="w24"></a>
+     </div>
+	<div class="mian_content">
+		<div id="page_content">
+			<iframe id="menuFrame" name="menuFrame" src=""
+				 frameborder="no" 
+				height="100%" width="100%"></iframe>
+		</div>
+	</div>
+</div>

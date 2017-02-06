@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
+<style>
+	#flow-right{
+		display: inline-block;
+		x-index: 9999;
+		
+	}
+	#button {
+		text-decoration: none;
+	}
+</style>
+<script type="text/javascript">
+$(function(){
+	width = $(".layout_left_menu").width();
+	var top =  $(".layout_left_menu").offset().top;
+	flag = 1
+	$("#flow-right").css("margin-left",width+20+"px");
+	$("#flow-right").css("margin-top",top+"px");
+	/* $("#layout_right_content").css("margin-left",width+60+"px"); */
+});
+	
+</script>
+<div class="layout_left_menu">
+	<ul class="tendina" id="menu">
+		<li class="childUlLi"><a href="#" target="menuFrame"><i
+				class="glyph-icon icon-home"></i>首页</a>
+			<ul style="display: none;">
+				<li><a href="http://www.baidu.com" target="menuFrame"><i
+						class="glyph-icon icon-chevron-right"></i>用户添加</a></li>
+			</ul></li>
+		<li class="childUlLi"><a href="#" target="menuFrame"> <i
+				class="glyph-icon icon-reorder"></i>成员管理
+		</a>
+			<ul style="display: none;">
+				<li><a href="#"><i class="glyph-icon icon-chevron-right"></i>后台菜单管理</a></li>
+				<li><a href="#"><i class="glyph-icon icon-chevron-right"></i>展示商品管理</a></li>
+				<li><a href="#"><i class="glyph-icon icon-chevron-right"></i>数据管理</a></li>
+			</ul></li>
+		<li class="childUlLi"><a href="#" target="menuFrame"> <i
+				class="glyph-icon icon-reorder"></i>角色管理
+		</a>
+			<ul style="display: none;">
+				<li><a href="#"><i class="glyph-icon icon-chevron-right"></i>修改密码</a></li>
+				<li><a href="#"><i class="glyph-icon icon-chevron-right"></i>帮助</a></li>
+			</ul></li>
+		<li class="childUlLi"><a href="#"> <i
+				class="glyph-icon  icon-location-arrow"></i>菜单管理
+		</a>
+			<ul style="display: none;">
+				<li><a href="#" target="menuFrame"><i
+						class="glyph-icon icon-chevron-right"></i>平台菜单</a></li>
+				<li><a href="#" target="menuFrame"><i
+						class="glyph-icon icon-chevron-right"></i>运行商菜单</a></li>
+				<li><a href="#" target="menuFrame"><i
+						class="glyph-icon icon-chevron-right"></i>服务站菜单</a></li>
+				<li><a href="#" target="menuFrame"><i
+						class="glyph-icon icon-chevron-right"></i>商家菜单</a></li>
+			</ul></li>
+	</ul>
+</div>
+	<div id = "flow-right">
+	</div>
+<!--菜单-->

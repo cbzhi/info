@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<style type="text/css">
+.error{
+	color:red;
+}
+input.error1{
+	background-color: #ffcccc;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/user/register}" method = "POST" th:object = "${user}" enctype="multipart/form-data">
+	<label>profile pictrue</label>:
+	<input type = "file" name = "pictrue" accept = "image/jpeg,image/png,image/gif" /><br>
+	<input type = "submit" value = "提交" />
+</form>
+</body>
+</html>

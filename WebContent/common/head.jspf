@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<c:set var="info" value="${pageContext.request.contextPath}"></c:set>
+
+<link rel="icon" href="${info}/images/cbz.png">
+<link href="${info}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="${info}/css/index.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="${info}/js/jquery.js"></script>
+<script type="text/javascript" src="${info}/js/tendina.js"></script>
+<script type="text/javascript" src="${info}/js/common.js"></script>
+
+<!-- login.jsp -->
+<%-- <link href="${info}/css/sticky-footer.css" rel="stylesheet" type="text/css"> --%>
+<%-- <link href="${info}/css/bootstrap-responsive.min.css" rel="stylesheet"> --%>
+<%-- <link href="${info}/css/demo_style.css" rel="stylesheet"> --%>
+<%-- <link href="${info}/css/style.css" rel="stylesheet"> --%>
+<%-- <link href="${info}/css/slimbox2.css" rel="stylesheet"> --%>
+<%-- <link href="${info}/css/animate.min.css" rel="stylesheet" type="text/css"> --%>
+<%-- <link href="${info}/css/bootstrap.min.css" rel="stylesheet"> --%>
+<%-- <link href="${info}/css/signin.css" rel="stylesheet"> --%>
+<%-- <script src="${info}/js/ie-emulation-modes-warning.js"></script>
+ <script src="${info}/js/ie10-viewport-bug-workaround.js"></script> --%>
