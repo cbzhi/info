@@ -28,12 +28,12 @@ public class User {
 	@Column(name="id")
 	private int id ;
 	
-	@NotNull
+	@NotNull(message = "username不能为空")
 	@Size(min=3,max=20,message="{username.size}")
 	@Column(name="username")
 	private String username ;
 	
-	@NotNull
+	@NotNull(message = "password不能为空")
 	@Size(min=3,max=20,message="{password.size}")
 	@Column(name="password")
 	private String password ;
@@ -41,15 +41,20 @@ public class User {
 	
 	@Column(name="query_password")
 	private String query_password ;
+	
 	@Column(name="mobile")
 	private String mobile ;
+	
 	@Column(name="email")
 	private String email ;
+	
 	@Column(name="status")
 	private int status ;
+	
 	@ManyToOne(cascade={CascadeType.ALL})
 	@JoinColumn(name="role_id")
 	private Role role ;
+	
 	@ManyToMany(cascade={CascadeType.ALL})
 	@JoinTable(name="function_user",joinColumns={@JoinColumn(name="user_id")},inverseJoinColumns={@JoinColumn(name="function_id")})
 	private List<Function> function ;

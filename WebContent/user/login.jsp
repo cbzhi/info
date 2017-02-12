@@ -14,41 +14,34 @@
 	color: #ff0000;
 }
 
-.errorblock{
-	color: #000;
-	background-color: #ffEEEE;
-	border: 3px solid #ff0000;
-	padding:8px;
-	margin:16px;
+.errorblock {
+	color: #ff0000;
+	border: 2px solid #ff0000;
 }
 </style>
 </head>
 
 <body>
-	 <form:errors path="*" element="div" cssClass="errorblock" />
-	 ${command.user.username}${status.errorMessage}${result}11
-	 <form:errors path="user.username" cssStyle="color:red"></form:errors>  
 	<div class="container">
-	<%-- 	<form:form class="form-signin text-center" action="${info}/user/login"  commandName = "user"
-			method="post" >
- --%>		
- <form class="form-signin text-center" action="${info}/user/login" 
-			method="post" >
- 	<h2 class="form-signin-heading">Please sign in</h2>
-			 <form:errors path="*" element="div" cssClass="errorblock" />
-			
-			<label for="inputEmail" class="sr-only">Email address</label> <input
-				type="text" name="username" id="inputEmail" class="form-control"
-				placeholder="username"  autofocus><br> 
-				<label
-				for="inputPassword" class="sr-only">Password</label> <input
-				type="password" name="password" id="inputPassword"
-				class="form-control" placeholder="password" required> <br>
+		<form:form class="form-signin text-center" action="${info}/user/login"
+			commandName="user" method="post">
+			<form:errors path="*" cssClass="errorblock"  element="div" ></form:errors>
+			<h2 class="form-signin-heading">Please sign in</h2>
+			<label for="inputEmail" class="sr-only">Email address</label>
+			<input type="text" name="username" id="inputEmail"
+				class="form-control" placeholder="username" autofocus>
+			<br>
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" name="password" id="inputPassword"
+				class="form-control" placeholder="password" required>
+			<br>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
 				in</button>
-		</form>
+			<br>
+			<a href = "${info}/user/forgetPsw">忘记密码</a>
+			<a href = "${info}/user/register" style = "float: right;">注册</a>
+		</form:form>
 	</div>
-	<!-- /container -->
 </body>
 </html>
 

@@ -17,7 +17,7 @@ import com.cbz.info.common.T;
 /**
  * Servlet Filter implementation class LoginFilter
  */
-@WebFilter("/*")
+/*@WebFilter("/user/*")*/
 public class LoginFilter implements Filter {
 
     public LoginFilter() {
@@ -31,10 +31,10 @@ public class LoginFilter implements Filter {
 		HttpServletResponse resp = (HttpServletResponse) response ;
 		HttpSession session = req.getSession();
 		Object user = session.getAttribute("user");
-		if(T.isBlank(user)&&req.getRequestURI().indexOf(".")==-1){
+		/*if(T.isBlank(user)&&req.getRequestURI().indexOf(".")==-1&&){
 			req.getRequestDispatcher("/user/login").forward(req, resp);
 			return ;
-		}
+		}*/
 		chain.doFilter(request, response);
 	}
 
