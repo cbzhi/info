@@ -8,7 +8,7 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 public class User1 {
 	
 	@NotNull
-	@Size(min=6,max=20)
+	@Size(min=6,max=2130)
 	protected String username ;
 
 	public String getUsername() {
