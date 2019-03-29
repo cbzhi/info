@@ -2,3 +2,22 @@ hello.info
 master
 modify
 fetue_modify
+
+used_memory:315419704
+used_memory_human:300.81M
+used_memory_rss:366116864
+used_memory_peak:1063239416
+used_memory_peak_human:1013.98M
+used_memory_lua:33792
+mem_fragmentation_ratio:1.16
+mem_allocator:jemalloc-3.6.0
+123
+
+used_memory:286859320
+used_memory_human:273.57M 1 -> 1.5 
+used_memory_rss:313896960
+used_memory_peak:1063239416
+used_memory_peak_human:1013.98M
+used_memory_lua:33792
+mem_fragmentation_ratio:1.09
+mem_allocator:jemalloc-3.6.0
